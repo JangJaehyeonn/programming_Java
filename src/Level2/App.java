@@ -2,15 +2,13 @@ package Level2;
 
 import java.util.*;
 
-import java.util.*;
-
 public class App {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
 //        ArithmeticCalculator<Integer> arithmeticCalculator = new ArithmeticCalculator<>(new ArrayList<>(), Integer.class);
-        ArithmeticCalculator<Double> arithmeticCalculator = new ArithmeticCalculator<>(new ArrayList<>(), Double.class);
+        ArithmeticCalculator arithmeticCalculator = new ArithmeticCalculator(new ArrayList<>());
         CircleCalculator circleCalculator = new CircleCalculator(new ArrayList<>());
 
         do {
@@ -20,9 +18,9 @@ public class App {
 
             if(choice == 1) {
                 System.out.print("첫 번째 숫자를 입력하세요: ");
-                double num1 = sc.nextDouble();
+                int num1 = sc.nextInt();
                 System.out.print("두 번째 숫자를 입력하세요: ");
-                double num2 = sc.nextDouble();
+                int num2 = sc.nextInt();
 
                 System.out.print("사칙연산 기호를 입력하세요: "); // +, -, *, /
                 /* charAt(idx) : charAt 메서드는 매개변수로 char 타입으로 반환 하고자하는 문자열의 위치(index)를 받는다. */
@@ -41,13 +39,6 @@ public class App {
                     arithmeticCalculator.inquiryResults();
                 }
 
-                System.out.println("저장된 연산결과 중 입력한 값보다 큰 값들을 조회하시겠습니까? (lambda 입력시 조회)");
-                if (Objects.equals(sc.next(), "lambda")) {
-                    System.out.println("기준 값을 입력하세요: ");
-                    double num = sc.nextDouble();
-                    arithmeticCalculator.printResultGreaterThan(num);
-                }
-
             } else {
                 System.out.println("원의 반지름을 입력하세요: ");
                 int radius = sc.nextInt();
@@ -62,6 +53,5 @@ public class App {
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
         } while (!sc.next().equals("exit"));
-
     }
 }

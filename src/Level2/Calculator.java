@@ -4,6 +4,7 @@ package Level2;
 import java.util.List;
 
 public abstract class Calculator {
+
     public static final double PI = 3.14;
 
     private final List<Double> results;
@@ -21,4 +22,5 @@ public abstract class Calculator {
     public List<Double> getResults() {
         return results;
     }
+
 }
