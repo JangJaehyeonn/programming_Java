@@ -11,30 +11,30 @@ public class App2 {
 
         do {
             System.out.print("첫 번째 숫자를 입력하세요: ");
-            int input1 = sc.nextInt();
+            int num1 = sc.nextInt();
             // Scanner를 사용하여 양의 정수를 입력받고 적합한 타입의 변수에 저장합니다.
             System.out.print("두 번째 숫자를 입력하세요: ");
-            int input2 = sc.nextInt();
+            int num2 = sc.nextInt();
             // Scanner를 사용하여 양의 정수를 입력받고 적합한 타입의 변수에 저장합니다.
             System.out.print("사칙연산 기호를 입력하세요: ");
-            char input3 = sc.next().charAt(0);      //input3은 연산자(사칙연산 기호)
+            char operator = sc.next().charAt(0);      //input3은 연산자(사칙연산 기호)
             // 사칙연산 기호를 적합한 타입으로 선언한 변수에 저장합니다.
             int result = 0;
 
 
-            switch (input3) {
+            switch (operator) {
                 case '+':
-                    result = input1 + input2;
+                    result = num1 + num2;
                     break;
                 case '-':
-                    result = input1 - input2;
+                    result = num1 - num2;
                     break;
                 case '*':
-                    result = input1 * input2;
+                    result =num1 * num2;
                     break;
                 case '/':
-                    if(input2 != 0) {
-                        result = input1 / input2;
+                    if(num2 != 0) {
+                        result = num1 / num2;
                     }else{
                         System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
                         return;         //continue도 가능함
