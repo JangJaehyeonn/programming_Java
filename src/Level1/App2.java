@@ -6,7 +6,7 @@ public class App2 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
+ 
         List<Integer> results = new ArrayList<>();
 
         do {
