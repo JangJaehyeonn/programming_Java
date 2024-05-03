@@ -44,7 +44,7 @@ public class App2 {
                     System.out.println("올바른 선택이 아닙니다.");
                     return;
             }
-
+            
             System.out.println("결과: " + result);
             results.add(result);
 
